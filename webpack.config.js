@@ -34,7 +34,6 @@ module.exports = {
       },
     ],
   },
-  externals: [/^aws-sdk/],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
