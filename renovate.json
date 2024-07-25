@@ -10,5 +10,6 @@
       "semanticCommitType": "fix",
       "matchFiles": ["package.json"]
     }
-  ]
+  ],
+  "forkProcessing": "enabled"
 }
