@@ -61,3 +61,4 @@ const distribution = new cloudfront.CloudFrontWebDistribution(this, "Distributio
 
 The `CloudFrontAuth` construct accepts a `requireGroupAnyOf` property
 that causes access to be restricted to only users in specific groups.
+
