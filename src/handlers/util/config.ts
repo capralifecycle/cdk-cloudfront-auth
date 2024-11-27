@@ -4,6 +4,10 @@ import * as path from "path"
 import { HttpHeaders } from "./cloudfront"
 import { CookieSettings } from "./cookies"
 import { Logger, LogLevel } from "./logger"
+import { fileURLToPath } from "url"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export interface StoredConfig {
   userPoolId: string

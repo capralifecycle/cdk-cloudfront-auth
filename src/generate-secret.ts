@@ -4,6 +4,11 @@ import * as path from "path"
 import { Construct } from "constructs"
 import { CustomResource, Stack } from "aws-cdk-lib"
 
+import { fileURLToPath } from "url"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 interface GenerateSecretProps {
   /**
    * Nonce to force secret update.
