@@ -1,7 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require("path")
+import * as path from "path"
+import { fileURLToPath } from "url"
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+export default {
   mode: "production",
   target: "node",
   node: {
@@ -41,8 +44,10 @@ module.exports = {
   },
   performance: {
     hints: "error",
+
     // Max size of deployment bundle in Lambda@Edge Viewer Request
     maxAssetSize: 1048576,
+
     // Max size of deployment bundle in Lambda@Edge Viewer Request
     maxEntrypointSize: 1048576,
   },

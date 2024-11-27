@@ -1,4 +1,4 @@
-import { decode, verify } from "jsonwebtoken"
+import jwt from "jsonwebtoken"
 import jwksClient, { RsaSigningKey, SigningKey } from "jwks-rsa"
 
 export interface IdTokenPayload {
@@ -44,7 +44,7 @@ export async function validate(
   issuer: string,
   audience: string,
 ): Promise<{ validationError: Error } | undefined> {
-  const decodedToken = decode(jwtToken, { complete: true })
+  const decodedToken = jwt.decode(jwtToken, { complete: true })
   if (!decodedToken || typeof decodedToken === "string") {
     return {
       validationError: new Error("Cannot parse JWT token"),
@@ -54,7 +54,7 @@ export async function validate(
   // The JWT contains a "kid" claim, key id, that tells which key
   // was used to sign the token.
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  const kid = decodedToken["header"]["kid"] as string
+  const kid = decodedToken["header"]["kid"]
   const jwk = await getSigningKey(jwksUri, kid)
   if (jwk instanceof Error) {
     return { validationError: jwk }
@@ -69,7 +69,7 @@ export async function validate(
   }
 
   return new Promise((resolve) =>
-    verify(jwtToken, jwk, verificationOptions, (err) =>
+    jwt.verify(jwtToken, jwk, verificationOptions, (err) =>
       err ? resolve({ validationError: err }) : resolve(undefined),
     ),
   )

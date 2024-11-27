@@ -4,7 +4,10 @@ import { ParameterResource } from "@henrist/cdk-cross-region-params"
 import * as path from "path"
 import { Construct } from "constructs"
 import { Duration, Stack } from "aws-cdk-lib"
+import { fileURLToPath } from "url"
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 const isSnapshot = process.env.IS_SNAPSHOT === "true"
 
 interface AuthLambdasProps {

@@ -1,6 +1,7 @@
 {
   "name": "example",
   "version": "0.0.0-development",
+  "type": "module",
   "scripts": {
     "cdk": "cdk",
     "test": "cdk synth"
@@ -8,7 +9,7 @@
   "devDependencies": {
     "@types/node": "20.16.11",
     "aws-cdk": "2.154.1",
-    "ts-node": "10.9.2",
+    "tsx": "4.19.2",
     "typescript": "5.5.4"
   },
   "dependencies": {
