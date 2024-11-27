@@ -2,18 +2,20 @@
   "name": "@liflig/cdk-cloudfront-auth",
   "version": "0.0.0-development",
   "description": "CDK Constructs for adding authentication for a CloudFront Distribution",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/capralifecycle/cdk-cloudfront-auth"
   },
   "scripts": {
-    "build": "rimraf dist && webpack && tsc",
+    "build": "rimraf dist && NODE_OPTIONS=--import=tsx webpack && tsc",
     "watch": "tsc -w",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "npm run build && husky",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "clean": "rimraf dist"
   },
   "keywords": [
     "cdk",
@@ -59,7 +61,7 @@
     "semantic-release": "24.1.2",
     "ts-jest": "29.2.5",
     "ts-loader": "9.5.1",
-    "ts-node": "10.9.2",
+    "tsx": "4.19.2",
     "typescript": "5.5.4",
     "webpack": "5.94.0",
     "webpack-cli": "5.1.4"
