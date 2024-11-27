@@ -92,7 +92,7 @@ export function generateCookies(param: {
   // Set cookies with the exact names and values Amplify uses
   // for seamless interoperability with Amplify.
   const decodedIdToken = decodeIdToken(param.tokens.idToken)
-  const tokenUserName = decodedIdToken["cognito:username"] as string
+  const tokenUserName = decodedIdToken["cognito:username"]
   const keyPrefix = `CognitoIdentityServiceProvider.${param.clientId}`
   const idTokenKey = `${keyPrefix}.${tokenUserName}.idToken`
   const accessTokenKey = `${keyPrefix}.${tokenUserName}.accessToken`

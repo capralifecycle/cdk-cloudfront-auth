@@ -159,7 +159,7 @@ async function exchangeCodeForTokens({
     const encodedSecret = Buffer.from(
       `${config.clientId}:${config.clientSecret}`,
     ).toString("base64")
-    requestConfig.headers!.Authorization = `Basic ${encodedSecret}`
+    requestConfig.headers.Authorization = `Basic ${encodedSecret}`
   }
   config.logger.debug("HTTP POST to Cognito token endpoint:", {
     uri: cognitoTokenEndpoint,
