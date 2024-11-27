@@ -1,14 +1,29 @@
 {
   "compilerOptions": {
-    "noEmit": true,
     "declaration": false,
     "inlineSourceMap": true,
     "inlineSources": true,
-    "lib": ["es2018", "es2019"],
-    "module": "commonjs",
     "strict": true,
     "strictPropertyInitialization": false,
-    "target": "ES2018"
+    "target": "es2022",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    "verbatimModuleSyntax": true,
+
+    "module": "preserve",
+    "noEmit": true,
+
+    "lib": [
+      "es2022"
+    ]
   },
-  "exclude": ["node_modules", "cdk.out"]
+  "exclude": [
+    "node_modules",
+    "cdk.out"
+  ]
 }
