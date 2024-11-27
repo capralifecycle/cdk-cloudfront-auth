@@ -1,6 +1,7 @@
-.PHONY: all build webapp infrastructure app
+.PHONY: all
 all: build
 
+.PHONY: build
 build:
 	# --ignore-scripts to ignore husky triggers for explicit build
 	npm install --ignore-scripts
