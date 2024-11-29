@@ -34,8 +34,17 @@ export interface Config extends StoredConfig {
 }
 
 export function getConfig(): Config {
+  const filename = "config.json"
+  let dirname: string
+  if (process.env.LAMBDA_TASK_ROOT) {
+    dirname = process.env.LAMBDA_TASK_ROOT
+  } else {
+    dirname = __dirname
+  }
+  const configFilePath = path.join(dirname, filename)
+  console.log("Loading config from", configFilePath)
   const config = JSON.parse(
-    readFileSync(path.join(__dirname, "/config.json"), "utf-8"),
+    readFileSync(configFilePath, "utf-8"),
   ) as StoredConfig
 
   // Derive the issuer and JWKS uri all JWT's will be signed with from
