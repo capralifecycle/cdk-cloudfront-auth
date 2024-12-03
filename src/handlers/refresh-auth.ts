@@ -46,7 +46,6 @@ export const handler = createRequestHandler(async (config, event) => {
       refreshToken,
     )
   } catch (err) {
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     return errorResponse(`Failed to refresh tokens: ${err}`)
   }
 
@@ -77,6 +76,7 @@ export const handler = createRequestHandler(async (config, event) => {
       { headers },
       config.logger,
     )
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err) {
     return redirectTo(redirectedFromUri, {
       cookies: generateCookies({

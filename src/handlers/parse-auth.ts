@@ -182,17 +182,14 @@ async function exchangeCodeForTokens({
     )
   } catch (err) {
     return {
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       error: `Failed to exchange authorization code for tokens: ${err}`,
     }
   }
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { status, headers, data: tokens } = postResult
 
   config.logger.info("Successfully exchanged authorization code for tokens")
   config.logger.debug("Response from Cognito token endpoint:", {
     status,
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     headers,
     tokens,
   })
