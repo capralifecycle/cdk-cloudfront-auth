@@ -13,7 +13,7 @@
     "typescript": "5.7.2"
   },
   "dependencies": {
-    "@liflig/cdk-cloudfront-auth": "1.6.5",
+    "@liflig/cdk-cloudfront-auth": "1.6.11",
     "aws-cdk-lib": "^2",
     "source-map-support": "^0.5"
   }
