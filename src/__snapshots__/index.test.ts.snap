@@ -1657,7 +1657,7 @@ exports[`A simple example 2`] = `
           ],
         },
         "Runtime": "nodejs18.x",
-        "Timeout": 10,
+        "Timeout": 120,
       },
       "Type": "AWS::Lambda::Function",
     },
@@ -1699,6 +1699,7 @@ exports[`A simple example 2`] = `
             {
               "Action": [
                 "lambda:GetFunction",
+                "lambda:GetFunctionConfiguration",
                 "lambda:UpdateFunctionCode",
               ],
               "Effect": "Allow",
