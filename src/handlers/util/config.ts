@@ -35,12 +35,7 @@ export interface Config extends StoredConfig {
 
 export function getConfig(): Config {
   const filename = "config.json"
-  let dirname: string
-  if (process.env.LAMBDA_TASK_ROOT) {
-    dirname = process.env.LAMBDA_TASK_ROOT
-  } else {
-    dirname = __dirname
-  }
+  const dirname = process.env.LAMBDA_TASK_ROOT || __dirname
   const configFilePath = path.join(dirname, filename)
   console.log("Loading config from", configFilePath)
   const config = JSON.parse(
