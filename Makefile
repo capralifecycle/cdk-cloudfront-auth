@@ -8,3 +8,7 @@ build:
 	npm run lint
 	npm run build
 	npm run test
+
+.PHONY: snapshots
+snapshots:
+	npm run test -- --updateSnapshot
