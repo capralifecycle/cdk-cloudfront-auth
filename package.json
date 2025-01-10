@@ -8,14 +8,14 @@
     "url": "https://github.com/capralifecycle/cdk-cloudfront-auth"
   },
   "scripts": {
-    "build": "rimraf dist && NODE_OPTIONS=--import=tsx webpack && tsc",
+    "build": "rm -rf dist && NODE_OPTIONS=--import=tsx webpack && tsc",
     "watch": "tsc -w",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "npm run build && husky",
     "semantic-release": "semantic-release",
-    "clean": "rimraf dist"
+    "clean": "rm -rf dist"
   },
   "keywords": [
     "cdk",
@@ -59,7 +59,6 @@
     "jsonwebtoken": "9.0.2",
     "jwks-rsa": "3.1.0",
     "prettier": "3.4.2",
-    "rimraf": "6.0.1",
     "semantic-release": "24.2.0",
     "ts-jest": "29.2.5",
     "ts-loader": "9.5.1",
