@@ -10,5 +10,6 @@
       "matchFiles": ["package.json"]
     }
   ],
-  "forkProcessing": "enabled"
+  "forkProcessing": "enabled",
+  "ignorePaths": ["**/node_modules/**", "**/example/**"]
 }
