@@ -44,7 +44,7 @@
     "@types/node": "22.15.3",
     "@typescript-eslint/eslint-plugin": "8.31.1",
     "@typescript-eslint/parser": "8.31.1",
-    "aws-cdk-lib": "2.192.0",
+    "aws-cdk-lib": "2.193.0",
     "axios": "1.9.0",
     "constructs": "10.4.2",
     "cookie": "1.0.2",
