@@ -41,7 +41,7 @@
     "@types/aws-lambda": "8.10.149",
     "@types/jest": "29.5.14",
     "@types/jsonwebtoken": "9.0.9",
-    "@types/node": "22.15.12",
+    "@types/node": "22.15.14",
     "@typescript-eslint/eslint-plugin": "8.32.0",
     "@typescript-eslint/parser": "8.32.0",
     "aws-cdk-lib": "2.194.0",
