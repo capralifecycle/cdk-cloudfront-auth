@@ -88,7 +88,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
+
+          # stage updated files
+          git add src/__snapshots__
+
           git commit -m "chore: update snapshots triggered by comment"
 
           # rebase onto the PR branch to avoid merge conflicts
