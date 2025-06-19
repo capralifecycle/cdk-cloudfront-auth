@@ -1,0 +1,55 @@
+name: update snapshots
+
+on:
+  issue_comment:
+    types: [created]
+
+defaults:
+  run:
+    # NOTE: A bit stricter than the default bash options used by GitHub Actions
+    # (bash --noprofile --norc -e -o pipefail {0})
+    shell: bash --noprofile --norc -euo pipefail {0}
+
+# NOTE: Set concurrency for the current workflow to 1
+concurrency: update-snapshots-${{ github.ref }}-${{ github.workflow }}
+
+jobs:
+  update-snapshots:
+    if: |
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, 'update snapshots')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.issue.pull_request.head.ref }}
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests with snapshot update
+        run: npm run test -- --updateSnapshot
+
+      - name: Check for snapshot changes
+        id: check_changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push snapshot changes
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "chore: update snapshots triggered by comment [skip ci]"
+          git push origin HEAD:${{ github.event.issue.pull_request.head.ref }}
