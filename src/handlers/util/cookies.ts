@@ -1,4 +1,4 @@
-import { CloudFrontHeaders } from "aws-lambda"
+import type { CloudFrontHeaders } from "aws-lambda"
 import { parse } from "cookie"
 import { decodeIdToken } from "./jwt"
 

@@ -3,9 +3,9 @@
 // Workaround for https://github.com/axios/axios/issues/3219
 /// <reference lib="dom" />
 
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
+import axios, { type AxiosRequestConfig, type AxiosResponse } from "axios"
 import { Agent } from "https"
-import { Logger } from "./logger"
+import type { Logger } from "./logger"
 
 const axiosInstance = axios.create({
   httpsAgent: new Agent({ keepAlive: true }),

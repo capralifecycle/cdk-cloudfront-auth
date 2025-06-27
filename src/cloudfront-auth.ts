@@ -1,20 +1,20 @@
+import { LambdaConfig } from "@liflig/cdk-lambda-config"
 import * as cloudfront from "aws-cdk-lib/aws-cloudfront"
 import {
-  AddBehaviorOptions,
-  BehaviorOptions,
-  IOrigin,
+  type AddBehaviorOptions,
+  type BehaviorOptions,
+  type IOrigin,
   ViewerProtocolPolicy,
 } from "aws-cdk-lib/aws-cloudfront"
-import * as cognito from "aws-cdk-lib/aws-cognito"
-import * as lambda from "aws-cdk-lib/aws-lambda"
-import { IVersion } from "aws-cdk-lib/aws-lambda"
-import { LambdaConfig } from "@liflig/cdk-lambda-config"
+import type * as cognito from "aws-cdk-lib/aws-cognito"
+import type * as lambda from "aws-cdk-lib/aws-lambda"
+import type { IVersion } from "aws-cdk-lib/aws-lambda"
+import { Construct } from "constructs"
 import { RetrieveClientSecret } from "./client-secret"
 import { ClientUpdate } from "./client-update"
 import { GenerateSecret } from "./generate-secret"
-import { StoredConfig } from "./handlers/util/config"
-import { AuthLambdas } from "./lambdas"
-import { Construct } from "constructs"
+import type { StoredConfig } from "./handlers/util/config"
+import type { AuthLambdas } from "./lambdas"
 
 export interface CloudFrontAuthProps {
   /**

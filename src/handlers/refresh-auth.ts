@@ -1,4 +1,4 @@
-import { AxiosResponse } from "axios"
+import type { AxiosResponse } from "axios"
 import { httpPostWithRetry } from "./util/axios"
 import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
 import { extractAndParseCookies, generateCookies } from "./util/cookies"

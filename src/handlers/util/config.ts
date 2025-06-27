@@ -1,10 +1,10 @@
 import { parse } from "cookie"
 import { readFileSync } from "fs"
 import * as path from "path"
-import { HttpHeaders } from "./cloudfront"
-import { CookieSettings } from "./cookies"
-import { Logger, LogLevel } from "./logger"
 import { fileURLToPath } from "url"
+import type { HttpHeaders } from "./cloudfront"
+import type { CookieSettings } from "./cookies"
+import { Logger, LogLevel } from "./logger"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

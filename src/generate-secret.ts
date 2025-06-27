@@ -1,8 +1,8 @@
+import { CustomResource, Stack } from "aws-cdk-lib"
 import * as lambda from "aws-cdk-lib/aws-lambda"
 import * as cr from "aws-cdk-lib/custom-resources"
-import * as path from "path"
 import { Construct } from "constructs"
-import { CustomResource, Stack } from "aws-cdk-lib"
+import * as path from "path"
 
 import { fileURLToPath } from "url"
 

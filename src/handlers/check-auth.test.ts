@@ -1,6 +1,6 @@
 import { isAuthorized } from "./check-auth"
-import { Config } from "./util/config"
-import { IdTokenPayload } from "./util/jwt"
+import type { Config } from "./util/config"
+import type { IdTokenPayload } from "./util/jwt"
 import { Logger, LogLevel } from "./util/logger"
 
 const baseConfig: Config = {

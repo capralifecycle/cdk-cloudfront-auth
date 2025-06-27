@@ -1,4 +1,4 @@
-import {
+import type {
   CloudFrontHeaders,
   CloudFrontRequestEvent,
   CloudFrontRequestHandler,
@@ -8,7 +8,7 @@ import {
   CloudFrontResponseResult,
 } from "aws-lambda"
 import html from "../error-page/template.html"
-import { Config, getConfig } from "./config"
+import { type Config, getConfig } from "./config"
 
 export type HttpHeaders = Record<string, string>
 

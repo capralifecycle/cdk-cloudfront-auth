@@ -1,4 +1,4 @@
-import * as cognito from "aws-cdk-lib/aws-cognito"
+import type * as cognito from "aws-cdk-lib/aws-cognito"
 import * as iam from "aws-cdk-lib/aws-iam"
 import * as cr from "aws-cdk-lib/custom-resources"
 import { Construct } from "constructs"

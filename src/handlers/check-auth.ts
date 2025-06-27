@@ -1,10 +1,10 @@
-import { CloudFrontRequestResult } from "aws-lambda"
+import type { CloudFrontRequestResult } from "aws-lambda"
 import { createHash, randomBytes } from "crypto"
 import { safeBase64Stringify } from "./util/base64"
 import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
-import { Config } from "./util/config"
+import type { Config } from "./util/config"
 import { extractAndParseCookies } from "./util/cookies"
-import { decodeIdToken, IdTokenPayload, validate } from "./util/jwt"
+import { decodeIdToken, type IdTokenPayload, validate } from "./util/jwt"
 import { createNonceHmac, generateNonce } from "./util/nonce"
 
 export const handler = createRequestHandler(async (config, event) => {

@@ -1,9 +1,9 @@
+import { ParameterResource } from "@henrist/cdk-cross-region-params"
+import { Duration, Stack } from "aws-cdk-lib"
 import * as iam from "aws-cdk-lib/aws-iam"
 import * as lambda from "aws-cdk-lib/aws-lambda"
-import { ParameterResource } from "@henrist/cdk-cross-region-params"
-import * as path from "path"
 import { Construct } from "constructs"
-import { Duration, Stack } from "aws-cdk-lib"
+import * as path from "path"
 import { fileURLToPath } from "url"
 
 const __filename = fileURLToPath(import.meta.url)

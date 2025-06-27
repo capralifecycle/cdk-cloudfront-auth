@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"
-import jwksClient, { RsaSigningKey, SigningKey } from "jwks-rsa"
+import jwksClient, { type RsaSigningKey, type SigningKey } from "jwks-rsa"
 
 export interface IdTokenPayload {
   sub: string

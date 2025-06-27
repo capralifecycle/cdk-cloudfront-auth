@@ -1,5 +1,5 @@
 import { createHmac, randomBytes } from "crypto"
-import { Config } from "./config"
+import type { Config } from "./config"
 
 export function checkNonceAge(
   nonce: string,
