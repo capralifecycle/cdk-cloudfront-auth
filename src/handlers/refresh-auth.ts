@@ -119,7 +119,8 @@ function validateRefreshRequest(
     throw new Error(
       "Your browser didn't send the nonce cookie along, but it is required for security (prevent CSRF).",
     )
-  } else if (currentNonce !== originalNonce) {
+  }
+  if (currentNonce !== originalNonce) {
     throw new Error("Nonce mismatch")
   }
   Object.entries({ idToken, accessToken, refreshToken }).forEach(

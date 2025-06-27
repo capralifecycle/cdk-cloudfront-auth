@@ -13,7 +13,7 @@ export const handler = createRequestHandler(async (config, event) => {
   const domainName = request.headers["host"][0].value
 
   let redirectedFromUri = `https://${domainName}`
-  let idToken: string | undefined = undefined
+  let idToken: string | undefined
 
   const cookies = extractAndParseCookies(request.headers, config.clientId)
   idToken = cookies.idToken
@@ -32,7 +32,8 @@ export const handler = createRequestHandler(async (config, event) => {
       redirectedFromUri,
       idToken,
     })
-  } else if ("technicalError" in validateResult) {
+  }
+  if ("technicalError" in validateResult) {
     return handleFailure({
       error: validateResult.technicalError,
       errorType: "server",

@@ -39,10 +39,7 @@ export async function httpPostWithRetry(
           "Doing exponential backoff with jitter, before attempting HTTP POST again ...",
         )
         await new Promise((resolve) =>
-          setTimeout(
-            resolve,
-            25 * (Math.pow(2, attempts) + Math.random() * attempts),
-          ),
+          setTimeout(resolve, 25 * (2 ** attempts + Math.random() * attempts)),
         )
         logger.debug("Done waiting, will try HTTP POST again now")
       }

@@ -156,7 +156,6 @@ export function generateCookies(param: {
     // Expire refresh token (so the browser will not send it in vain again)
     cookies[refreshTokenKey] = expireCookie(cookies[refreshTokenKey])
   }
-
   // Nonce, nonceHmac and pkce are only used during login phase.
   ;[
     "spa-auth-edge-nonce",
