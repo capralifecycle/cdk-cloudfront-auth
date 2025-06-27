@@ -28,6 +28,9 @@
       "suspicious": {
         "noExplicitAny": "off"
       },
+      "performance": {
+        "noAccumulatingSpread": "off"
+      },
       "style": {
         "useSelfClosingElements": "warn",
         "noParameterAssign": "error",
