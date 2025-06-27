@@ -12,3 +12,11 @@ build:
 .PHONY: snapshots
 snapshots:
 	npm run test -- --updateSnapshot
+
+.PHONY: lint
+lint:
+	npm run lint
+
+.PHONY: fix
+fix:
+	npm run lint:fix
