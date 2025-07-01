@@ -3,11 +3,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export enum LogLevel {
-  "none" = 0,
-  "error" = 10,
-  "warn" = 20,
-  "info" = 30,
-  "debug" = 40,
+  none = 0,
+  error = 10,
+  warn = 20,
+  info = 30,
+  debug = 40,
 }
 
 export class Logger {

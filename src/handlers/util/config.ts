@@ -1,10 +1,10 @@
+import { readFileSync } from "node:fs"
+import * as path from "node:path"
+import { fileURLToPath } from "node:url"
 import { parse } from "cookie"
-import { readFileSync } from "fs"
-import * as path from "path"
-import { HttpHeaders } from "./cloudfront"
-import { CookieSettings } from "./cookies"
+import type { HttpHeaders } from "./cloudfront"
+import type { CookieSettings } from "./cookies"
 import { Logger, LogLevel } from "./logger"
-import { fileURLToPath } from "url"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -44,15 +44,16 @@ export function getConfig(): Config {
 
   // Derive the issuer and JWKS uri all JWT's will be signed with from
   // the User Pool's ID and region.
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+  // biome-ignore lint/style/noNonNullAssertion: Suppression carried over from eslint
   const userPoolRegion = /^(\S+?)_\S+$/.exec(config.userPoolId)![1]
   const tokenIssuer = `https://cognito-idp.${userPoolRegion}.amazonaws.com/${config.userPoolId}`
   const tokenJwksUri = `${tokenIssuer}/.well-known/jwks.json`
 
   return {
     nonceMaxAge:
-      parseInt(parse(config.cookieSettings.nonce.toLowerCase())["max-age"]) ||
-      60 * 60 * 24,
+      Number.parseInt(
+        parse(config.cookieSettings.nonce.toLowerCase())["max-age"],
+      ) || 60 * 60 * 24,
     ...config,
     tokenIssuer,
     tokenJwksUri,

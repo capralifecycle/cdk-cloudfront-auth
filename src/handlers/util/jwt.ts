@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"
-import jwksClient, { RsaSigningKey, SigningKey } from "jwks-rsa"
+import jwksClient, { type RsaSigningKey, type SigningKey } from "jwks-rsa"
 
 export interface IdTokenPayload {
   sub: string
@@ -53,7 +53,7 @@ export async function validate(
 
   // The JWT contains a "kid" claim, key id, that tells which key
   // was used to sign the token.
-  const kid = decodedToken["header"]["kid"]
+  const kid = decodedToken.header.kid
   const jwk = await getSigningKey(jwksUri, kid)
   if (jwk instanceof Error) {
     return { validationError: jwk }

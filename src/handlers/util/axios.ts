@@ -3,9 +3,9 @@
 // Workaround for https://github.com/axios/axios/issues/3219
 /// <reference lib="dom" />
 
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
-import { Agent } from "https"
-import { Logger } from "./logger"
+import { Agent } from "node:https"
+import axios, { type AxiosRequestConfig, type AxiosResponse } from "axios"
+import type { Logger } from "./logger"
 
 const axiosInstance = axios.create({
   httpsAgent: new Agent({ keepAlive: true }),
@@ -25,7 +25,7 @@ export async function httpPostWithRetry(
     } catch (err: any) {
       logger.debug(`HTTP POST to ${url} failed (attempt ${attempts}):`)
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      logger.debug((err.response && err.response.data) || err)
+      logger.debug(err.response?.data || err)
       if (attempts >= 5) {
         // Try 5 times at most.
         logger.error(
@@ -39,10 +39,7 @@ export async function httpPostWithRetry(
           "Doing exponential backoff with jitter, before attempting HTTP POST again ...",
         )
         await new Promise((resolve) =>
-          setTimeout(
-            resolve,
-            25 * (Math.pow(2, attempts) + Math.random() * attempts),
-          ),
+          setTimeout(resolve, 25 * (2 ** attempts + Math.random() * attempts)),
         )
         logger.debug("Done waiting, will try HTTP POST again now")
       }

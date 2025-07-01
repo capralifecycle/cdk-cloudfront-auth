@@ -4,7 +4,7 @@ import { extractAndParseCookies, generateCookies } from "./util/cookies"
 // eslint-disable-next-line @typescript-eslint/require-await
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request
-  const domainName = request.headers["host"][0].value
+  const domainName = request.headers.host[0].value
   const { idToken, accessToken, refreshToken } = extractAndParseCookies(
     request.headers,
     config.clientId,

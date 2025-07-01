@@ -71,6 +71,9 @@ exports[`A simple example 1`] = `
       "Type": "AWS::Lambda::Function",
     },
     "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62d71460a2563467dc2ce6865c3635c0ba": {
+      "Metadata": {
+        "aws:cdk:do-not-refactor": true,
+      },
       "Properties": {
         "FunctionName": {
           "Ref": "AuthLambdasCheckAuthFunction6B3C9473",
@@ -165,6 +168,9 @@ exports[`A simple example 1`] = `
       "Type": "AWS::Lambda::Function",
     },
     "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2Ed71460a2563467dc2ce6865c3635c0ba": {
+      "Metadata": {
+        "aws:cdk:do-not-refactor": true,
+      },
       "Properties": {
         "FunctionName": {
           "Ref": "AuthLambdasHttpHeadersFunctionC7A2BAB9",
@@ -259,6 +265,9 @@ exports[`A simple example 1`] = `
       "Type": "AWS::Lambda::Function",
     },
     "AuthLambdasParseAuthFunctionCurrentVersionA32A5991d71460a2563467dc2ce6865c3635c0ba": {
+      "Metadata": {
+        "aws:cdk:do-not-refactor": true,
+      },
       "Properties": {
         "FunctionName": {
           "Ref": "AuthLambdasParseAuthFunctionC04A121B",
@@ -353,6 +362,9 @@ exports[`A simple example 1`] = `
       "Type": "AWS::Lambda::Function",
     },
     "AuthLambdasRefreshAuthFunctionCurrentVersion632285F6d71460a2563467dc2ce6865c3635c0ba": {
+      "Metadata": {
+        "aws:cdk:do-not-refactor": true,
+      },
       "Properties": {
         "FunctionName": {
           "Ref": "AuthLambdasRefreshAuthFunction4B0B3BD6",
@@ -485,6 +497,9 @@ exports[`A simple example 1`] = `
       "Type": "AWS::Lambda::Function",
     },
     "AuthLambdasSignOutFunctionCurrentVersion0576BBB1d71460a2563467dc2ce6865c3635c0ba": {
+      "Metadata": {
+        "aws:cdk:do-not-refactor": true,
+      },
       "Properties": {
         "FunctionName": {
           "Ref": "AuthLambdasSignOutFunction251863E4",

@@ -1,19 +1,19 @@
-import { CloudFrontResponseResult } from "aws-lambda"
-import { AxiosResponse } from "axios"
+import type { CloudFrontResponseResult } from "aws-lambda"
+import type { AxiosResponse } from "axios"
 import { httpPostWithRetry } from "./util/axios"
 import { decodeSafeBase64 } from "./util/base64"
 import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
-import { Config } from "./util/config"
+import type { Config } from "./util/config"
 import { extractAndParseCookies, generateCookies } from "./util/cookies"
 import { validate } from "./util/jwt"
 import { validateNonce } from "./util/nonce"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request
-  const domainName = request.headers["host"][0].value
+  const domainName = request.headers.host[0].value
 
   let redirectedFromUri = `https://${domainName}`
-  let idToken: string | undefined = undefined
+  let idToken: string | undefined
 
   const cookies = extractAndParseCookies(request.headers, config.clientId)
   idToken = cookies.idToken
@@ -32,7 +32,8 @@ export const handler = createRequestHandler(async (config, event) => {
       redirectedFromUri,
       idToken,
     })
-  } else if ("technicalError" in validateResult) {
+  }
+  if ("technicalError" in validateResult) {
     return handleFailure({
       error: validateResult.technicalError,
       errorType: "server",
