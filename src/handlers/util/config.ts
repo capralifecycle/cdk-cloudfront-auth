@@ -44,7 +44,7 @@ export function getConfig(): Config {
 
   // Derive the issuer and JWKS uri all JWT's will be signed with from
   // the User Pool's ID and region.
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+  // biome-ignore lint/style/noNonNullAssertion: Suppression carried over from eslint
   const userPoolRegion = /^(\S+?)_\S+$/.exec(config.userPoolId)![1]
   const tokenIssuer = `https://cognito-idp.${userPoolRegion}.amazonaws.com/${config.userPoolId}`
   const tokenJwksUri = `${tokenIssuer}/.well-known/jwks.json`

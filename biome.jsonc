@@ -26,7 +26,8 @@
         "noUnusedImports": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "noAssignInExpressions": "off"
       },
       "performance": {
         "noAccumulatingSpread": "off"
