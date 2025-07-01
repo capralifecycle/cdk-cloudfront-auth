@@ -19,10 +19,10 @@ export interface CookieSettings {
  * name: e.g. cookies["nonce"].
  */
 function extractCookiesFromHeaders(headers: CloudFrontHeaders): Cookies {
-  if (!headers["cookie"]) {
+  if (!headers.cookie) {
     return {}
   }
-  const cookies = headers["cookie"].reduce<Cookies>(
+  const cookies = headers.cookie.reduce<Cookies>(
     (reduced, header) => ({
       ...reduced,
       ...(parse(header.value) as Cookies),
@@ -105,11 +105,11 @@ export function generateCookies(param: {
     UserAttributes: [
       {
         Name: "sub",
-        Value: decodedIdToken["sub"],
+        Value: decodedIdToken.sub,
       },
       {
         Name: "email",
-        Value: decodedIdToken["email"],
+        Value: decodedIdToken.email,
       },
     ],
     Username: tokenUserName,

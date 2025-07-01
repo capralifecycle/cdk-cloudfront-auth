@@ -5,7 +5,7 @@ import { extractAndParseCookies, generateCookies } from "./util/cookies"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request
-  const domainName = request.headers["host"][0].value
+  const domainName = request.headers.host[0].value
   let redirectedFromUri = `https://${domainName}`
 
   function errorResponse(error: string) {
@@ -57,7 +57,7 @@ export const handler = createRequestHandler(async (config, event) => {
     const encodedSecret = Buffer.from(
       `${config.clientId}:${config.clientSecret}`,
     ).toString("base64")
-    headers["Authorization"] = `Basic ${encodedSecret}`
+    headers.Authorization = `Basic ${encodedSecret}`
   }
 
   let postResult: AxiosResponse<{
@@ -77,7 +77,7 @@ export const handler = createRequestHandler(async (config, event) => {
       config.logger,
     )
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (err) {
+  } catch (_err) {
     return redirectTo(redirectedFromUri, {
       cookies: generateCookies({
         event: "refreshFailed",

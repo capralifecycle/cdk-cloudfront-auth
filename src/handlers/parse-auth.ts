@@ -10,7 +10,7 @@ import { validateNonce } from "./util/nonce"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request
-  const domainName = request.headers["host"][0].value
+  const domainName = request.headers.host[0].value
 
   let redirectedFromUri = `https://${domainName}`
   let idToken: string | undefined

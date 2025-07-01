@@ -1,10 +1,10 @@
+import * as path from "node:path"
+import { fileURLToPath } from "node:url"
 import { ParameterResource } from "@henrist/cdk-cross-region-params"
 import { Duration, Stack } from "aws-cdk-lib"
 import * as iam from "aws-cdk-lib/aws-iam"
 import * as lambda from "aws-cdk-lib/aws-lambda"
 import { Construct } from "constructs"
-import * as path from "path"
-import { fileURLToPath } from "url"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

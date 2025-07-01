@@ -1,4 +1,4 @@
-import { createHmac, randomBytes } from "crypto"
+import { createHmac, randomBytes } from "node:crypto"
 import type { Config } from "./config"
 
 export function checkNonceAge(
@@ -7,7 +7,7 @@ export function checkNonceAge(
 ): { clientError: string } | undefined {
   // Nonce should not be too old.
   const timestamp = Number.parseInt(nonce.slice(0, nonce.indexOf("T")))
-  if (isNaN(timestamp)) {
+  if (Number.isNaN(timestamp)) {
     return {
       clientError: "Invalid nonce",
     }
