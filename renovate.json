@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>capralifecycle/renovate-config:library"],
-  "automerge": false,
+  "automerge": true,
   "packageRules": [
     {
       "description": "Create release for package updates that is part of the bundled code",
