@@ -47,7 +47,7 @@
     "cookie": "1.0.2",
     "html-loader": "5.1.0",
     "husky": "9.1.7",
-    "jest": "30.0.4",
+    "jest": "30.0.5",
     "jest-cdk-snapshot": "2.3.6",
     "jsonwebtoken": "9.0.2",
     "jwks-rsa": "3.2.0",
