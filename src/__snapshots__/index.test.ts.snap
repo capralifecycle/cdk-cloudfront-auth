@@ -1470,6 +1470,10 @@ exports[`A simple example 2`] = `
           },
         },
         "Handler": "framework.onEvent",
+        "LoggingConfig": {
+          "ApplicationLogLevel": "FATAL",
+          "LogFormat": "JSON",
+        },
         "Role": {
           "Fn::GetAtt": [
             "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleCB18E252",
@@ -1583,6 +1587,10 @@ exports[`A simple example 2`] = `
           },
         },
         "Handler": "framework.onEvent",
+        "LoggingConfig": {
+          "ApplicationLogLevel": "FATAL",
+          "LogFormat": "JSON",
+        },
         "Role": {
           "Fn::GetAtt": [
             "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleD0656D3D",
