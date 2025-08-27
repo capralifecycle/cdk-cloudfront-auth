@@ -88,7 +88,7 @@ export class AuthLambdas extends Construct {
           ? lambda.Code.fromInline("snapshot-value")
           : lambda.Code.fromAsset(path.join(__dirname, `../dist/${assetName}`)),
       handler: "index.handler",
-      runtime: lambda.Runtime.NODEJS_18_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       timeout: Duration.seconds(5),
       role,
       description:
