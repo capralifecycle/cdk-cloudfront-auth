@@ -20,3 +20,7 @@ lint:
 .PHONY: lint-fix
 lint-fix:
 	npm run lint:fix
+
+.PHONY: fmt
+fmt:
+	npm run fmt
