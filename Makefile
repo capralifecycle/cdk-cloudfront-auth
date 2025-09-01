@@ -17,6 +17,10 @@ snapshots:
 lint:
 	npm run lint
 
-.PHONY: fix
-fix:
+.PHONY: lint-fix
+lint-fix:
 	npm run lint:fix
+
+.PHONY: fmt
+fmt:
+	npm run fmt

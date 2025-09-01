@@ -13,6 +13,7 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "lint": "biome check",
     "lint:fix": "biome check --fix",
+    "fmt": "biome format --write",
     "prepare": "npm run build && husky",
     "semantic-release": "semantic-release",
     "clean": "rm -rf dist"
@@ -34,7 +35,7 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "2.68.0",
-    "@biomejs/biome": "2.1.4",
+    "@biomejs/biome": "2.2.2",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@types/aws-lambda": "8.10.152",

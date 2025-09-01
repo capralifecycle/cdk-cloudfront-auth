@@ -149,6 +149,7 @@ export function generateCookies(param: {
 
   if (param.event === "signOut") {
     // Expire all cookies
+    // biome-ignore lint/suspicious/useIterableCallbackReturn: ignored using `--suppress`
     Object.keys(cookies).forEach(
       (key) => (cookies[key] = expireCookie(cookies[key])),
     )
