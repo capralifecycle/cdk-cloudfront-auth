@@ -6,7 +6,7 @@ export function checkNonceAge(
   maxAge: number,
 ): { clientError: string } | undefined {
   // Nonce should not be too old.
-  const timestamp = Number.parseInt(nonce.slice(0, nonce.indexOf("T")))
+  const timestamp = Number.parseInt(nonce.slice(0, nonce.indexOf("T")), 10)
   if (Number.isNaN(timestamp)) {
     return {
       clientError: "Invalid nonce",
