@@ -24,3 +24,7 @@ lint-fix:
 .PHONY: fmt
 fmt:
 	npm run fmt
+
+.PHONY: upgrade-deps
+upgrade-deps:
+	npm run upgrade-deps

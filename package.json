@@ -16,7 +16,8 @@
     "fmt": "biome format --write",
     "prepare": "npm run build && husky",
     "semantic-release": "semantic-release",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "upgrade-deps": "ncu --upgrade --install=always --format group"
   },
   "keywords": [
     "cdk",
@@ -52,6 +53,7 @@
     "jest-cdk-snapshot": "2.3.6",
     "jsonwebtoken": "9.0.2",
     "jwks-rsa": "3.2.0",
+    "npm-check-updates": "19.0.0",
     "semantic-release": "24.2.9",
     "ts-jest": "29.4.4",
     "ts-loader": "9.5.4",
