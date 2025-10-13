@@ -55,7 +55,7 @@
     "jwks-rsa": "3.2.0",
     "npm-check-updates": "19.0.0",
     "semantic-release": "24.2.9",
-    "ts-jest": "29.4.4",
+    "ts-jest": "29.4.5",
     "ts-loader": "9.5.4",
     "tsx": "4.20.6",
     "typescript": "5.9.3",
