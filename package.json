@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "@henrist/cdk-cross-region-params": "^2.0.1",
-    "@liflig/cdk-lambda-config": "1.7.19"
+    "@liflig/cdk-lambda-config": "1.7.21"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.0.0"
