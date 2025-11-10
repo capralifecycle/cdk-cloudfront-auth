@@ -55,7 +55,7 @@
     "jsonwebtoken": "9.0.2",
     "jwks-rsa": "3.2.0",
     "npm-check-updates": "19.1.2",
-    "semantic-release": "25.0.1",
+    "semantic-release": "25.0.2",
     "ts-jest": "29.4.5",
     "ts-loader": "9.5.4",
     "tsx": "4.20.6",
