@@ -65,12 +65,12 @@ exports[`A simple example 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs24.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62028e3b1b1c3b65fb71dcf865dab1c3e1": {
+    "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D6275fb447891cea0a00a2c26c8b446b559": {
       "Metadata": {
         "aws:cdk:do-not-refactor": true,
       },
@@ -93,7 +93,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D6275fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn"}}",
             ],
@@ -113,7 +113,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D6275fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn"}}",
             ],
@@ -162,12 +162,12 @@ exports[`A simple example 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs24.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E028e3b1b1c3b65fb71dcf865dab1c3e1": {
+    "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E75fb447891cea0a00a2c26c8b446b559": {
       "Metadata": {
         "aws:cdk:do-not-refactor": true,
       },
@@ -190,7 +190,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E75fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn"}}",
             ],
@@ -210,7 +210,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E75fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn"}}",
             ],
@@ -259,12 +259,12 @@ exports[`A simple example 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs24.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasParseAuthFunctionCurrentVersionA32A5991028e3b1b1c3b65fb71dcf865dab1c3e1": {
+    "AuthLambdasParseAuthFunctionCurrentVersionA32A599175fb447891cea0a00a2c26c8b446b559": {
       "Metadata": {
         "aws:cdk:do-not-refactor": true,
       },
@@ -287,7 +287,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A5991028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A599175fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn"}}",
             ],
@@ -307,7 +307,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A5991028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A599175fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn"}}",
             ],
@@ -356,12 +356,12 @@ exports[`A simple example 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs24.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasRefreshAuthFunctionCurrentVersion632285F6028e3b1b1c3b65fb71dcf865dab1c3e1": {
+    "AuthLambdasRefreshAuthFunctionCurrentVersion632285F675fb447891cea0a00a2c26c8b446b559": {
       "Metadata": {
         "aws:cdk:do-not-refactor": true,
       },
@@ -384,7 +384,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F6028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F675fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn"}}",
             ],
@@ -404,7 +404,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F6028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F675fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn"}}",
             ],
@@ -491,12 +491,12 @@ exports[`A simple example 1`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs24.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasSignOutFunctionCurrentVersion0576BBB1028e3b1b1c3b65fb71dcf865dab1c3e1": {
+    "AuthLambdasSignOutFunctionCurrentVersion0576BBB175fb447891cea0a00a2c26c8b446b559": {
       "Metadata": {
         "aws:cdk:do-not-refactor": true,
       },
@@ -519,7 +519,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB1028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB175fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn"}}",
             ],
@@ -539,7 +539,7 @@ exports[`A simple example 1`] = `
             [
               "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn","Value":"",
               {
-                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB1028e3b1b1c3b65fb71dcf865dab1c3e1",
+                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB175fb447891cea0a00a2c26c8b446b559",
               },
               "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn"}}",
             ],
@@ -1416,7 +1416,7 @@ exports[`A simple example 2`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs24.x",
       },
       "Type": "AWS::Lambda::Function",
     },
@@ -1699,7 +1699,7 @@ exports[`A simple example 2`] = `
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs24.x",
         "Timeout": 120,
       },
       "Type": "AWS::Lambda::Function",
