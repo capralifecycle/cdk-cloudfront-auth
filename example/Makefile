@@ -1,13 +1,12 @@
 .PHONY: all
-all: build
+all: ci
 
-.PHONY: build
-build: install-parent-pkg test
+.PHONY: ci
+ci: install test
 
-.PHONY: install-parent-pkg
-install-parent-pkg:
-	cd .. && npm pack
-	npm install
+.PHONY: install
+install:
+	npm ci
 	npm install --no-save ../liflig-cdk-cloudfront-auth-0.0.0-development.tgz
 
 .PHONY: test
