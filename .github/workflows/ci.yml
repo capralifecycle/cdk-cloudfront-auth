@@ -30,31 +30,17 @@ jobs:
 
       - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
         with:
-          node-version: 24.13.1
+          node-version-file: .node-version
 
-      - name: install dependencies
-        run: npm ci
+      - name: build and test
+        run: make ci
 
-      - name: lint
-        run: npm run lint
+      - name: pack
+        run: npm pack --ignore-scripts
 
-      - name: prepare
-        run: npm run test
-
-      - name: example project - npm pack
-        run: npm pack
-
-      - name: example project - npm ci
+      - name: example project - build and test
         working-directory: example
-        run: npm ci
-
-      - name: example project - npm install
-        working-directory: example
-        run: npm install --no-save ../liflig-cdk-cloudfront-auth-0.0.0-development.tgz
-
-      - name: example project - npm test
-        run: npm run test
-        working-directory: example
+        run: make ci
 
       - name: conditionally semantic release
         if: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
