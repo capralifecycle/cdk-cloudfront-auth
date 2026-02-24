@@ -14,10 +14,11 @@
     "lint": "biome check",
     "lint:fix": "biome check --fix",
     "fmt": "biome format --write",
+    "fmt:check": "biome format --check",
     "prepare": "npm run build && husky",
     "semantic-release": "semantic-release",
     "clean": "rm -rf dist",
-    "upgrade-deps": "ncu --upgrade --install=always --format group"
+    "upgrade-deps": "ncu --upgrade --install=always --format group --reject @types/node"
   },
   "keywords": [
     "cdk",
