@@ -44,7 +44,7 @@
     "@types/jsonwebtoken": "9.0.10",
     "@types/node": "24.10.15",
     "aws-cdk-lib": "2.240.0",
-    "axios": "1.13.5",
+    "axios": "1.13.6",
     "constructs": "10.5.1",
     "cookie": "1.1.1",
     "html-loader": "5.1.0",
