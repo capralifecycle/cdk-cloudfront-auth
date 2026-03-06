@@ -1,5 +1,5 @@
 {
-  "app": "tsx bin/example.ts",
+  "app": "bun run bin/example.ts",
   "requireApproval": "never",
   "watch": {
     "include": [

@@ -6,9 +6,9 @@ ci: install test
 
 .PHONY: install
 install:
-	npm ci
-	npm install --no-save ../liflig-cdk-cloudfront-auth-0.0.0-development.tgz
+	bun install --frozen-lockfile
+	bun install --no-save ../liflig-cdk-cloudfront-auth-0.0.0-development.tgz
 
 .PHONY: test
 test:
-	npm run test
+	bun run test
