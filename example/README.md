@@ -10,11 +10,11 @@ integration testing.
 
 ```bash
 cd ..
-npm pack
+bun pm pack
 cd example
-npm install --no-save ../liflig-cdk-cloudfront-auth-0.0.0-development.tgz
+bun install --no-save ../liflig-cdk-cloudfront-auth-0.0.0-development.tgz
 # must be logged in to aws for next command
-npx cdk deploy --all
+bunx cdk deploy --all
 ```
 
 See link to test page in outputs.
@@ -28,7 +28,7 @@ Add or remove user from `test` group to test authorization.
 ```bash
 # (modify the next bucket name first, see deploy output)
 aws s3 rm --recursive s3://cdk-cloudfront-auth-example-main-bucket83908e77-wc5jf6w82bqb
-npx cdk destroy main
+bunx cdk destroy main
 # wait so that CloudFront frees up the lambdas
-npx cdk destroy auth-lambdas
+bunx cdk destroy auth-lambdas
 ```
