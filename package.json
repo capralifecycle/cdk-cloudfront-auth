@@ -8,14 +8,14 @@
     "url": "https://github.com/capralifecycle/cdk-cloudfront-auth"
   },
   "scripts": {
-    "build": "rm -rf dist && NODE_OPTIONS=--import=tsx webpack && tsc",
+    "build": "bun run build.ts && tsc",
     "watch": "tsc -w",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "check": "biome ci",
     "fix": "biome check --write",
-    "prepare": "npm run build && husky",
+    "prepare": "bun run build && bunx husky",
     "semantic-release": "semantic-release",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist lib",
     "upgrade-deps": "ncu --upgrade --install=always --format group --reject @types/node"
   },
   "keywords": [
@@ -35,7 +35,6 @@
     "provenance": true
   },
   "devDependencies": {
-    "@aws-cdk/assert": "2.68.0",
     "@biomejs/biome": "2.4.4",
     "@commitlint/cli": "20.4.2",
     "@commitlint/config-conventional": "20.4.2",
@@ -47,7 +46,6 @@
     "axios": "1.13.6",
     "constructs": "10.5.1",
     "cookie": "1.1.1",
-    "html-loader": "5.1.0",
     "husky": "9.1.7",
     "jest": "30.2.0",
     "jest-cdk-snapshot": "2.3.6",
@@ -56,11 +54,7 @@
     "npm-check-updates": "19.6.3",
     "semantic-release": "25.0.3",
     "ts-jest": "29.4.6",
-    "ts-loader": "9.5.4",
-    "tsx": "4.21.0",
-    "typescript": "5.9.3",
-    "webpack": "5.105.3",
-    "webpack-cli": "6.0.1"
+    "typescript": "5.9.3"
   },
   "dependencies": {
     "@henrist/cdk-cross-region-params": "^2.0.1",

@@ -2,35 +2,39 @@
 all: build
 
 .PHONY: build
-build: install fix test npm-build
+build: install fix test bun-build
 
 .PHONY: ci
-ci: install check test npm-build
+ci: install check test bun-build
 
 .PHONY: install
 install:
 ifeq ($(CI),true)
-	npm ci
+	bun ci
 else
-	npm install --ignore-scripts
+	bun install
 endif
 
 .PHONY: fix
 fmt:
-	npm run fix
+	bun run fix
 
 .PHONY: check
 check:
-	npm run check
+	bun run check
 
-.PHONY: npm-build
-npm-build:
-	npm run build
+.PHONY: clean
+clean:
+	rm -rf dist lib
+
+.PHONY: bun-build
+bun-build:
+	bun run build
 
 .PHONY: test
 test:
-	npm run test -- --updateSnapshot
+	bun run test -- --updateSnapshot
 
 .PHONY: upgrade-deps
 upgrade-deps:
-	npm run upgrade-deps
+	bun run upgrade-deps
