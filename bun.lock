@@ -6,7 +6,7 @@
       "name": "@liflig/cdk-cloudfront-auth",
       "dependencies": {
         "@henrist/cdk-cross-region-params": "^2.0.1",
-        "@liflig/cdk-lambda-config": "1.7.35",
+        "@liflig/cdk-lambda-config": "1.7.36",
       },
       "devDependencies": {
         "@biomejs/biome": "2.4.5",
@@ -241,7 +241,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@liflig/cdk-lambda-config": ["@liflig/cdk-lambda-config@1.7.35", "", { "peerDependencies": { "aws-cdk-lib": "^2.0.0", "constructs": "^10.0.0" } }, "sha512-XFkzuUfKr7Rcz/+51XICmWy9zy1sgOull1AxAc4ovc79I5L0Lc0EdXiNluQtMb0wAHgUAWjAh1RIAQZGhLWvyw=="],
+    "@liflig/cdk-lambda-config": ["@liflig/cdk-lambda-config@1.7.36", "", { "peerDependencies": { "aws-cdk-lib": "^2.0.0", "constructs": "^10.0.0" } }, "sha512-1uKgLsOGVy7h50FIWLhfhjRqXESgcNzTUbsuZCt0FYH+qbKFFp10IL3E7BE44QCYp9yIsWJJNsD8lMgraOxziQ=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@0.2.12", "", { "dependencies": { "@emnapi/core": "^1.4.3", "@emnapi/runtime": "^1.4.3", "@tybys/wasm-util": "^0.10.0" } }, "sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ=="],
 
