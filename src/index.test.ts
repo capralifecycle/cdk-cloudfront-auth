@@ -95,7 +95,6 @@ test("Auth Lambdas with nonce", () => {
   })
 
   function getLogicalId(scope: AuthLambdas): string {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return Stack.of(scope).resolve(
       (
         scope.node

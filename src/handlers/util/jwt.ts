@@ -77,6 +77,5 @@ export async function validate(
 export function decodeIdToken(jwt: string): IdTokenPayload {
   const tokenBody = jwt.split(".")[1]
   const decodableTokenBody = tokenBody.replace(/-/g, "+").replace(/_/g, "/")
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return JSON.parse(Buffer.from(decodableTokenBody, "base64").toString())
 }
