@@ -65,7 +65,6 @@ export const handler = createRequestHandler(async (config, event) => {
     access_token: string
   }>
   try {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     postResult = await httpPostWithRetry(
       `https://${config.cognitoAuthDomain}/oauth2/token`,
       new URLSearchParams({
@@ -76,7 +75,6 @@ export const handler = createRequestHandler(async (config, event) => {
       { headers },
       config.logger,
     )
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (_err) {
     return redirectTo(redirectedFromUri, {
       cookies: generateCookies({

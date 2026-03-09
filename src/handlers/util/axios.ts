@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 // Workaround for https://github.com/axios/axios/issues/3219
 /// <reference lib="dom" />
@@ -24,7 +23,6 @@ export async function httpPostWithRetry(
       return await axiosInstance.post(url, data, config)
     } catch (err: any) {
       logger.debug(`HTTP POST to ${url} failed (attempt ${attempts}):`)
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       logger.debug(err.response?.data || err)
       if (attempts >= 5) {
         // Try 5 times at most.

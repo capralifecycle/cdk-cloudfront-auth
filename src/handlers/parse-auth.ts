@@ -174,7 +174,6 @@ async function exchangeCodeForTokens({
     refresh_token: string
   }>
   try {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     postResult = await httpPostWithRetry(
       cognitoTokenEndpoint,
       body,
@@ -243,7 +242,6 @@ function validateQueryStringAndCookies(props: {
   // The querystring state should be a JSON string.
   let parsedState: { nonce?: string; requestedUri?: string }
   try {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     parsedState = JSON.parse(decodeSafeBase64(state))
   } catch {
     return {

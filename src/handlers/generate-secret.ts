@@ -8,7 +8,6 @@ type OnEventHandler = (event: {
   Data?: Record<string, string>
 }>
 
-// eslint-disable-next-line @typescript-eslint/require-await
 export const handler: OnEventHandler = async (event) => {
   switch (event.RequestType) {
     case "Delete":
