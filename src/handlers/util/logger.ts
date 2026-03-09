@@ -1,4 +1,3 @@
-
 export enum LogLevel {
   none = 0,
   error = 10,
