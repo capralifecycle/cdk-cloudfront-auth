@@ -16,7 +16,7 @@ else
 endif
 
 .PHONY: fix
-fmt:
+fix:
 	bun run fix
 
 .PHONY: check
