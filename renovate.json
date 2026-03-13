@@ -8,6 +8,10 @@
       "packageNames": ["@aws-sdk", "axios", "cookie", "jsonwebtoken", "jwks-rsa", "typescript", "webpack"],
       "semanticCommitType": "fix",
       "matchFiles": ["package.json"]
+    },
+    {
+      "matchPackageNames": ["@types/node"],
+      "allowedVersions": "^24"
     }
   ],
   "forkProcessing": "enabled",
