@@ -109,7 +109,11 @@ export class CrossRegionParam<T> extends Construct {
   ) {
     const physicalResourceId = cr.PhysicalResourceId.of(props.name)
 
-    new cr.AwsCustomResource(this, id, {
+    // "Resoure" is an intentional typo preserved for backward compatibility.
+    // Changing it would alter CloudFormation logical IDs and cause resource
+    // replacement in existing deployments.
+    const paramScope = new Construct(this, id)
+    new cr.AwsCustomResource(paramScope, "Resoure", {
       onUpdate: {
         service: "SSM",
         action: "putParameter",
