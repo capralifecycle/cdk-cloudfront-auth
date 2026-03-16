@@ -5,7 +5,7 @@
     "": {
       "name": "example",
       "dependencies": {
-        "@liflig/cdk-cloudfront-auth": "1.8.36",
+        "@liflig/cdk-cloudfront-auth": "1.10.0",
         "aws-cdk-lib": "2.240.0",
         "source-map-support": "^0.5",
       },
@@ -27,11 +27,7 @@
 
     "@balena/dockerignore": ["@balena/dockerignore@1.0.2", "", {}, "sha512-wMue2Sy4GAVTk6Ic4tJVcnfdau+gx2EnG7S+uAEe+TWJFqE4YoWN4/H8MSLj4eYJKxGg26lZwboEniNiNwZQ6Q=="],
 
-    "@henrist/cdk-cross-region-params": ["@henrist/cdk-cross-region-params@2.0.1", "", { "peerDependencies": { "aws-cdk-lib": "^2.0.0" } }, "sha512-JHrX+FmzzZ42nciTqCJMImqpr9+yFjXBjMeQBJOWqxK0CB72aLzVoU7aAa55pWUWa8ewlExTIQYjXDWdtc2kAQ=="],
-
-    "@liflig/cdk-cloudfront-auth": ["@liflig/cdk-cloudfront-auth@1.8.36", "", { "dependencies": { "@henrist/cdk-cross-region-params": "^2.0.1", "@liflig/cdk-lambda-config": "1.7.33" }, "peerDependencies": { "aws-cdk-lib": "^2.0.0" } }, "sha512-XnxfwhBCWShl1nOTPROmUD4eUbEeJPFjNaf48l5IWg6ZlsNtv+CPnxRqxFqdCQIdInB1yiJr9/4TYJ4qsUba/g=="],
-
-    "@liflig/cdk-lambda-config": ["@liflig/cdk-lambda-config@1.7.33", "", { "peerDependencies": { "aws-cdk-lib": "^2.0.0", "constructs": "^10.0.0" } }, "sha512-0m2ToU3zRmXciAn4D8iLDYlpNkeFhjUZxPewTsOM46PVGXdqP95oBSo9fsDr3ajOXWQu5k3kp7aSARy5f/cxZw=="],
+    "@liflig/cdk-cloudfront-auth": ["@liflig/cdk-cloudfront-auth@1.10.0", "", { "peerDependencies": { "aws-cdk-lib": "^2.0.0" } }, "sha512-u8pvA08uF/3orK4NlOiem6pn2/LODRJUcYUtCJmPOnjkMFZqeAN2txUe4v88aOMUwt0LqpR5UC7dFZPPHrifxA=="],
 
     "@types/node": ["@types/node@22.13.1", "", { "dependencies": { "undici-types": "~6.20.0" } }, "sha512-jK8uzQlrvXqEU91UxiK5J7pKHyzgnI1Qnl0QDHIgVGuolJhRb9EEl28Cj9b3rGR8B2lhFCtvIm5os8lFnO/1Ew=="],
 
