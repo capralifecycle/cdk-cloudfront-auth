@@ -27,6 +27,10 @@ check:
 clean:
 	rm -rf dist lib
 
+.PHONY: clean-all
+clean-all: clean
+	rm -rf node_modules
+
 .PHONY: bun-build
 bun-build:
 	bun run build
