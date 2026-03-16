@@ -5,6 +5,7 @@
   ],
   "exclude": [
     "src/**/*.test.ts",
-    "src/handlers/*.ts"
+    "src/handlers/*.ts",
+    "src/lambda-config/handler.ts"
   ]
 }

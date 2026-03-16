@@ -1,4 +1,3 @@
-import { LambdaConfig } from "@liflig/cdk-lambda-config"
 import * as cloudfront from "aws-cdk-lib/aws-cloudfront"
 import {
   type AddBehaviorOptions,
@@ -14,6 +13,7 @@ import { RetrieveClientSecret } from "./client-secret"
 import { ClientUpdate } from "./client-update"
 import { GenerateSecret } from "./generate-secret"
 import type { StoredConfig } from "./handlers/util/config"
+import { LambdaConfig } from "./lambda-config/lambda-config"
 import type { AuthLambdas } from "./lambdas"
 
 export interface CloudFrontAuthProps {
