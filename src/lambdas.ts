@@ -1,10 +1,10 @@
 import * as path from "node:path"
 import { fileURLToPath } from "node:url"
-import { ParameterResource } from "@henrist/cdk-cross-region-params"
 import { Duration, Stack } from "aws-cdk-lib"
 import * as iam from "aws-cdk-lib/aws-iam"
 import * as lambda from "aws-cdk-lib/aws-lambda"
 import { Construct } from "constructs"
+import { CrossRegionParam } from "./cross-region-params"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -30,11 +30,11 @@ interface AuthLambdasProps {
  * distribution is deployed from, so that it can be used cross-region.
  */
 export class AuthLambdas extends Construct {
-  public readonly checkAuthFn: ParameterResource<lambda.IVersion>
-  public readonly httpHeadersFn: ParameterResource<lambda.IVersion>
-  public readonly parseAuthFn: ParameterResource<lambda.IVersion>
-  public readonly refreshAuthFn: ParameterResource<lambda.IVersion>
-  public readonly signOutFn: ParameterResource<lambda.IVersion>
+  public readonly checkAuthFn: CrossRegionParam<lambda.IVersion>
+  public readonly httpHeadersFn: CrossRegionParam<lambda.IVersion>
+  public readonly parseAuthFn: CrossRegionParam<lambda.IVersion>
+  public readonly refreshAuthFn: CrossRegionParam<lambda.IVersion>
+  public readonly signOutFn: CrossRegionParam<lambda.IVersion>
 
   private readonly regions: string[]
   private readonly nonce: string | undefined
@@ -99,7 +99,7 @@ export class AuthLambdas extends Construct {
       throw new Error("node.addr not found - ensure aws-cdk is up-to-update")
     }
 
-    return new ParameterResource<lambda.IVersion>(this, `${id}VersionParam`, {
+    return new CrossRegionParam<lambda.IVersion>(this, `${id}VersionParam`, {
       nonce: isSnapshot ? "snapshot" : undefined,
       parameterName: `/cf/region/${region}/stack/${stackName}/${this.node.addr}-${id}-function-arn`,
       referenceToResource: (scope, id, reference) =>
