@@ -81,10 +81,10 @@ exports[`A simple example 1`] = `
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1Resoure8ACD3434": {
+    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1BD215FEC": {
       "DeletionPolicy": "Delete",
       "DependsOn": [
-        "AuthLambdasCheckAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy088F1114",
+        "AuthLambdasCheckAuthFunctionVersionParamParameuwest1CustomResourcePolicy387046A7",
       ],
       "Properties": {
         "Create": {
@@ -123,7 +123,7 @@ exports[`A simple example 1`] = `
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy088F1114": {
+    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1CustomResourcePolicy387046A7": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -140,7 +140,7 @@ exports[`A simple example 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "AuthLambdasCheckAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy088F1114",
+        "PolicyName": "AuthLambdasCheckAuthFunctionVersionParamParameuwest1CustomResourcePolicy387046A7",
         "Roles": [
           {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
@@ -178,10 +178,10 @@ exports[`A simple example 1`] = `
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1Resoure0C3C81F2": {
+    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest18A708A7E": {
       "DeletionPolicy": "Delete",
       "DependsOn": [
-        "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1ResoureCustomResourcePolicyC99B8AA6",
+        "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1CustomResourcePolicy84EC4F32",
       ],
       "Properties": {
         "Create": {
@@ -220,7 +220,7 @@ exports[`A simple example 1`] = `
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1ResoureCustomResourcePolicyC99B8AA6": {
+    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1CustomResourcePolicy84EC4F32": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -237,7 +237,7 @@ exports[`A simple example 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1ResoureCustomResourcePolicyC99B8AA6",
+        "PolicyName": "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1CustomResourcePolicy84EC4F32",
         "Roles": [
           {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
@@ -275,10 +275,10 @@ exports[`A simple example 1`] = `
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasParseAuthFunctionVersionParamParameuwest1Resoure934661C6": {
+    "AuthLambdasParseAuthFunctionVersionParamParameuwest18E5AA0F3": {
       "DeletionPolicy": "Delete",
       "DependsOn": [
-        "AuthLambdasParseAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicyCEAE27DB",
+        "AuthLambdasParseAuthFunctionVersionParamParameuwest1CustomResourcePolicy9F895760",
       ],
       "Properties": {
         "Create": {
@@ -317,7 +317,7 @@ exports[`A simple example 1`] = `
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasParseAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicyCEAE27DB": {
+    "AuthLambdasParseAuthFunctionVersionParamParameuwest1CustomResourcePolicy9F895760": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -334,7 +334,7 @@ exports[`A simple example 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "AuthLambdasParseAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicyCEAE27DB",
+        "PolicyName": "AuthLambdasParseAuthFunctionVersionParamParameuwest1CustomResourcePolicy9F895760",
         "Roles": [
           {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
@@ -372,10 +372,10 @@ exports[`A simple example 1`] = `
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1Resoure0C0D8913": {
+    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest18EF137DE": {
       "DeletionPolicy": "Delete",
       "DependsOn": [
-        "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy095CEC70",
+        "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1CustomResourcePolicyA56AF653",
       ],
       "Properties": {
         "Create": {
@@ -414,7 +414,7 @@ exports[`A simple example 1`] = `
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy095CEC70": {
+    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1CustomResourcePolicyA56AF653": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -431,7 +431,7 @@ exports[`A simple example 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy095CEC70",
+        "PolicyName": "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1CustomResourcePolicyA56AF653",
         "Roles": [
           {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
@@ -507,10 +507,10 @@ exports[`A simple example 1`] = `
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasSignOutFunctionVersionParamParameuwest1Resoure18583D2D": {
+    "AuthLambdasSignOutFunctionVersionParamParameuwest158CF63E5": {
       "DeletionPolicy": "Delete",
       "DependsOn": [
-        "AuthLambdasSignOutFunctionVersionParamParameuwest1ResoureCustomResourcePolicy16B30BE4",
+        "AuthLambdasSignOutFunctionVersionParamParameuwest1CustomResourcePolicy897CD112",
       ],
       "Properties": {
         "Create": {
@@ -549,7 +549,7 @@ exports[`A simple example 1`] = `
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasSignOutFunctionVersionParamParameuwest1ResoureCustomResourcePolicy16B30BE4": {
+    "AuthLambdasSignOutFunctionVersionParamParameuwest1CustomResourcePolicy897CD112": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -566,7 +566,7 @@ exports[`A simple example 1`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "AuthLambdasSignOutFunctionVersionParamParameuwest1ResoureCustomResourcePolicy16B30BE4",
+        "PolicyName": "AuthLambdasSignOutFunctionVersionParamParameuwest1CustomResourcePolicy897CD112",
         "Roles": [
           {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
