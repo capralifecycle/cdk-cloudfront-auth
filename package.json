@@ -63,6 +63,6 @@
     "aws-cdk-lib": "^2.0.0"
   },
   "overrides": {
-    "minimatch": "10.2.4"
+    "minimatch": "10.2.5"
   }
 }
