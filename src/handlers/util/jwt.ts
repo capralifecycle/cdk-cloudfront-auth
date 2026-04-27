@@ -54,6 +54,11 @@ export async function validate(
   // The JWT contains a "kid" claim, key id, that tells which key
   // was used to sign the token.
   const kid = decodedToken.header.kid
+  if (!kid) {
+    return {
+      validationError: new Error("JWT header is missing 'kid' claim"),
+    }
+  }
   const jwk = await getSigningKey(jwksUri, kid)
   if (jwk instanceof Error) {
     return { validationError: jwk }
