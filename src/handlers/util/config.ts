@@ -52,7 +52,7 @@ export function getConfig(): Config {
   return {
     nonceMaxAge:
       Number.parseInt(
-        parse(config.cookieSettings.nonce.toLowerCase())["max-age"],
+        parse(config.cookieSettings.nonce.toLowerCase())["max-age"] ?? "",
         10,
       ) || 60 * 60 * 24,
     ...config,
