@@ -46,7 +46,7 @@
     "@types/node": "24.12.4",
     "adm-zip": "^0.5.16",
     "aws-cdk-lib": "2.253.1",
-    "axios": "1.16.0",
+    "axios": "1.16.1",
     "constructs": "10.6.0",
     "cookie": "1.1.1",
     "husky": "9.1.7",
