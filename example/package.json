@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@liflig/cdk-cloudfront-auth": "1.10.0",
-    "aws-cdk-lib": "2.240.0",
+    "aws-cdk-lib": "2.246.0",
     "source-map-support": "^0.5"
   }
 }
