@@ -37,8 +37,8 @@
   "devDependencies": {
     "@aws-sdk/client-lambda": "^3.1005.0",
     "@biomejs/biome": "2.5.1",
-    "@commitlint/cli": "21.0.2",
-    "@commitlint/config-conventional": "21.0.2",
+    "@commitlint/cli": "21.1.0",
+    "@commitlint/config-conventional": "21.1.0",
     "@types/adm-zip": "^0.5.7",
     "@types/aws-lambda": "8.10.162",
     "@types/jest": "30.0.0",
