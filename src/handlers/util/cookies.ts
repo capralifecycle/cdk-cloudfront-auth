@@ -1,5 +1,5 @@
 import type { CloudFrontHeaders } from "aws-lambda"
-import { parse } from "cookie"
+import { parseCookie } from "cookie"
 import { decodeIdToken } from "./jwt"
 
 type Cookies = Record<string, string | undefined>
@@ -25,7 +25,7 @@ function extractCookiesFromHeaders(headers: CloudFrontHeaders): Cookies {
   const cookies = headers.cookie.reduce<Cookies>(
     (reduced, header) => ({
       ...reduced,
-      ...(parse(header.value) as Cookies),
+      ...(parseCookie(header.value) as Cookies),
     }),
     {},
   )

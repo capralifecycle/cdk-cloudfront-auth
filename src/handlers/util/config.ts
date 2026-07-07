@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs"
 import * as path from "node:path"
 import { fileURLToPath } from "node:url"
-import { parse } from "cookie"
+import { parseCookie } from "cookie"
 import type { HttpHeaders } from "./cloudfront"
 import type { CookieSettings } from "./cookies"
 import { Logger, LogLevel } from "./logger"
@@ -52,7 +52,7 @@ export function getConfig(): Config {
   return {
     nonceMaxAge:
       Number.parseInt(
-        parse(config.cookieSettings.nonce.toLowerCase())["max-age"] ?? "",
+        parseCookie(config.cookieSettings.nonce.toLowerCase())["max-age"] ?? "",
         10,
       ) || 60 * 60 * 24,
     ...config,
