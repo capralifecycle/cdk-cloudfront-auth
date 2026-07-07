@@ -48,7 +48,7 @@
     "aws-cdk-lib": "2.261.0",
     "axios": "1.18.1",
     "constructs": "10.6.0",
-    "cookie": "1.1.1",
+    "cookie": "2.0.1",
     "husky": "9.1.7",
     "jest": "30.4.2",
     "jest-cdk-snapshot": "2.3.6",
