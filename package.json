@@ -44,7 +44,7 @@
     "@types/jest": "30.0.0",
     "@types/jsonwebtoken": "9.0.10",
     "@types/node": "24.13.3",
-    "adm-zip": "^0.5.16",
+    "adm-zip": "^0.6.0",
     "aws-cdk-lib": "2.261.0",
     "axios": "1.18.1",
     "constructs": "10.6.0",
