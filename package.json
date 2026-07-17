@@ -54,7 +54,7 @@
     "jest-cdk-snapshot": "2.3.6",
     "jsonwebtoken": "9.0.3",
     "jwks-rsa": "3.2.2",
-    "semantic-release": "25.0.6",
+    "semantic-release": "25.0.7",
     "ts-jest": "29.4.11",
     "typescript": "6.0.3"
   },
