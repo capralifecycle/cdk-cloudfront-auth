@@ -55,7 +55,7 @@
     "jsonwebtoken": "9.0.3",
     "jwks-rsa": "3.2.2",
     "semantic-release": "25.0.8",
-    "ts-jest": "29.4.11",
+    "ts-jest": "29.4.12",
     "typescript": "6.0.3"
   },
   "dependencies": {},
