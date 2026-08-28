@@ -89,7 +89,7 @@ function createErrorHtml(props: {
   const params = { ...props, region: process.env.AWS_REGION }
   return html.replace(
     /\${([^}]*)}/g,
-    (_, v: keyof typeof params) => params[v] || "",
+    (_: string, v: keyof typeof params) => params[v] || "",
   )
 }
 

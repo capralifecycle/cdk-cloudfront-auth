@@ -21,6 +21,10 @@
     "lib": [
       "es2022"
     ],
+    "types": [
+      "bun",
+      "node"
+    ],
     "outDir": "./lib"
   }
 }

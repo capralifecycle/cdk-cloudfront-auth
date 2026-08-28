@@ -155,16 +155,17 @@ async function exchangeCodeForTokens({
     code_verifier: pkce,
   }).toString()
 
-  const requestConfig: Parameters<typeof httpPostWithRetry>[2] = {
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
+  const requestHeaders: Record<string, string> = {
+    "Content-Type": "application/x-www-form-urlencoded",
   }
   if (config.clientSecret) {
     const encodedSecret = Buffer.from(
       `${config.clientId}:${config.clientSecret}`,
     ).toString("base64")
-    requestConfig.headers.Authorization = `Basic ${encodedSecret}`
+    requestHeaders.Authorization = `Basic ${encodedSecret}`
+  }
+  const requestConfig: Parameters<typeof httpPostWithRetry>[2] = {
+    headers: requestHeaders,
   }
   config.logger.debug("HTTP POST to Cognito token endpoint:", {
     uri: cognitoTokenEndpoint,

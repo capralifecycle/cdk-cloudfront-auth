@@ -11,12 +11,13 @@
     "build": "bun run build.ts && tsc",
     "watch": "tsc -w",
     "test": "IS_SNAPSHOT=true bun test",
-    "check": "biome ci",
+    "check": "biome ci && bun run typecheck",
     "fix": "biome check --write",
     "prepare": "bun run build && bunx husky",
     "semantic-release": "semantic-release",
     "clean": "rm -rf dist lib",
-    "upgrade-deps": "bun update"
+    "upgrade-deps": "bun update",
+    "typecheck": "tsc -p tsconfig.check.json"
   },
   "keywords": [
     "cdk",
