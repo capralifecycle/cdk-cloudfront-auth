@@ -1,6 +1,6 @@
 import type { CloudFrontHeaders } from "aws-lambda"
 import { parseCookie } from "cookie"
-import { decodeIdToken } from "./jwt"
+import { decodeIdToken } from "./jwt.js"
 
 type Cookies = Record<string, string | undefined>
 

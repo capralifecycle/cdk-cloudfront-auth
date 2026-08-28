@@ -1,7 +1,11 @@
 import type { AxiosResponse } from "axios"
-import { httpPostWithRetry } from "./util/axios"
-import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
-import { extractAndParseCookies, generateCookies } from "./util/cookies"
+import { httpPostWithRetry } from "./util/axios.js"
+import {
+  createRequestHandler,
+  redirectTo,
+  staticPage,
+} from "./util/cloudfront.js"
+import { extractAndParseCookies, generateCookies } from "./util/cookies.js"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request

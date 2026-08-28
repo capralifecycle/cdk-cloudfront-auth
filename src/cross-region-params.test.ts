@@ -1,6 +1,8 @@
+import { expect, test } from "bun:test"
+import assert from "node:assert/strict"
 import { App, Stack } from "aws-cdk-lib"
 import { Template } from "aws-cdk-lib/assertions"
-import { CrossRegionParam } from "./cross-region-params"
+import { CrossRegionParam } from "./cross-region-params.js"
 
 function createParam(props: {
   producerRegion: string
@@ -65,6 +67,7 @@ test("get resolves via SSM when cross-region", () => {
     nonce: "test-nonce",
   })
 
+  assert.ok(consumerStack)
   const template = Template.fromStack(consumerStack)
 
   // Consumer stack should have a CfnParameter for the nonce

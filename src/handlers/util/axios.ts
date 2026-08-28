@@ -3,7 +3,7 @@
 
 import { Agent } from "node:https"
 import axios, { type AxiosRequestConfig, type AxiosResponse } from "axios"
-import type { Logger } from "./logger"
+import type { Logger } from "./logger.js"
 
 const axiosInstance = axios.create({
   httpsAgent: new Agent({ keepAlive: true }),

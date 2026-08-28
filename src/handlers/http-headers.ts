@@ -1,4 +1,4 @@
-import { createResponseHandler } from "./util/cloudfront"
+import { createResponseHandler } from "./util/cloudfront.js"
 
 // Headers are added in the response handler.
 export const handler = createResponseHandler(

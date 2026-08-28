@@ -1,12 +1,16 @@
 import type { CloudFrontResponseResult } from "aws-lambda"
 import type { AxiosResponse } from "axios"
-import { httpPostWithRetry } from "./util/axios"
-import { decodeSafeBase64 } from "./util/base64"
-import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
-import type { Config } from "./util/config"
-import { extractAndParseCookies, generateCookies } from "./util/cookies"
-import { validate } from "./util/jwt"
-import { validateNonce } from "./util/nonce"
+import { httpPostWithRetry } from "./util/axios.js"
+import { decodeSafeBase64 } from "./util/base64.js"
+import {
+  createRequestHandler,
+  redirectTo,
+  staticPage,
+} from "./util/cloudfront.js"
+import type { Config } from "./util/config.js"
+import { extractAndParseCookies, generateCookies } from "./util/cookies.js"
+import { validate } from "./util/jwt.js"
+import { validateNonce } from "./util/nonce.js"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request
@@ -151,16 +155,17 @@ async function exchangeCodeForTokens({
     code_verifier: pkce,
   }).toString()
 
-  const requestConfig: Parameters<typeof httpPostWithRetry>[2] = {
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
+  const requestHeaders: Record<string, string> = {
+    "Content-Type": "application/x-www-form-urlencoded",
   }
   if (config.clientSecret) {
     const encodedSecret = Buffer.from(
       `${config.clientId}:${config.clientSecret}`,
     ).toString("base64")
-    requestConfig.headers.Authorization = `Basic ${encodedSecret}`
+    requestHeaders.Authorization = `Basic ${encodedSecret}`
+  }
+  const requestConfig: Parameters<typeof httpPostWithRetry>[2] = {
+    headers: requestHeaders,
   }
   config.logger.debug("HTTP POST to Cognito token endpoint:", {
     uri: cognitoTokenEndpoint,

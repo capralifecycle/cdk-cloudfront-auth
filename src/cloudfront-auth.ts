@@ -9,12 +9,12 @@ import type * as cognito from "aws-cdk-lib/aws-cognito"
 import type * as lambda from "aws-cdk-lib/aws-lambda"
 import type { IVersion } from "aws-cdk-lib/aws-lambda"
 import { Construct } from "constructs"
-import { RetrieveClientSecret } from "./client-secret"
-import { ClientUpdate } from "./client-update"
-import { GenerateSecret } from "./generate-secret"
-import type { StoredConfig } from "./handlers/util/config"
-import { LambdaConfig } from "./lambda-config/lambda-config"
-import type { AuthLambdas } from "./lambdas"
+import { RetrieveClientSecret } from "./client-secret.js"
+import { ClientUpdate } from "./client-update.js"
+import { GenerateSecret } from "./generate-secret.js"
+import type { StoredConfig } from "./handlers/util/config.js"
+import { LambdaConfig } from "./lambda-config/lambda-config.js"
+import type { AuthLambdas } from "./lambdas.js"
 
 export interface CloudFrontAuthProps {
   /**

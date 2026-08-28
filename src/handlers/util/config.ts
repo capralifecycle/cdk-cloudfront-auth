@@ -2,9 +2,9 @@ import { readFileSync } from "node:fs"
 import * as path from "node:path"
 import { fileURLToPath } from "node:url"
 import { parseCookie } from "cookie"
-import type { HttpHeaders } from "./cloudfront"
-import type { CookieSettings } from "./cookies"
-import { Logger, LogLevel } from "./logger"
+import type { HttpHeaders } from "./cloudfront.js"
+import type { CookieSettings } from "./cookies.js"
+import { Logger, LogLevel } from "./logger.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

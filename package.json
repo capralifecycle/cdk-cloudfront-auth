@@ -10,13 +10,14 @@
   "scripts": {
     "build": "bun run build.ts && tsc",
     "watch": "tsc -w",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "check": "biome ci",
+    "test": "IS_SNAPSHOT=true bun test",
+    "check": "biome ci && bun run typecheck",
     "fix": "biome check --write",
     "prepare": "bun run build && bunx husky",
     "semantic-release": "semantic-release",
     "clean": "rm -rf dist lib",
-    "upgrade-deps": "bun update"
+    "upgrade-deps": "bun update",
+    "typecheck": "tsc -p tsconfig.check.json"
   },
   "keywords": [
     "cdk",
@@ -39,9 +40,10 @@
     "@biomejs/biome": "2.5.10",
     "@commitlint/cli": "21.2.2",
     "@commitlint/config-conventional": "21.2.2",
+    "@liflig/cdk-snapshot": "1.0.0",
     "@types/adm-zip": "^0.5.7",
     "@types/aws-lambda": "8.10.162",
-    "@types/jest": "30.0.0",
+    "@types/bun": "1.4.0",
     "@types/jsonwebtoken": "9.0.10",
     "@types/node": "24.13.3",
     "adm-zip": "^0.6.0",
@@ -50,12 +52,9 @@
     "constructs": "10.8.1",
     "cookie": "2.0.1",
     "husky": "9.1.7",
-    "jest": "30.4.2",
-    "jest-cdk-snapshot": "2.3.6",
     "jsonwebtoken": "9.0.3",
     "jwks-rsa": "4.1.0",
     "semantic-release": "25.0.9",
-    "ts-jest": "29.4.12",
     "typescript": "6.0.3"
   },
   "dependencies": {},

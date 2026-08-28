@@ -1,7 +1,8 @@
-import { isAuthorized } from "./check-auth"
-import type { Config } from "./util/config"
-import type { IdTokenPayload } from "./util/jwt"
-import { Logger, LogLevel } from "./util/logger"
+import { describe, expect, it } from "bun:test"
+import { isAuthorized } from "./check-auth.js"
+import type { Config } from "./util/config.js"
+import type { IdTokenPayload } from "./util/jwt.js"
+import { Logger, LogLevel } from "./util/logger.js"
 
 const baseConfig: Config = {
   userPoolId: "dummy",
