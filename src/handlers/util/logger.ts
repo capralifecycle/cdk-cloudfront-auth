@@ -1,13 +1,19 @@
-export enum LogLevel {
-  none = 0,
-  error = 10,
-  warn = 20,
-  info = 30,
-  debug = 40,
-}
+export const LogLevel = {
+  none: 0,
+  error: 10,
+  warn: 20,
+  info: 30,
+  debug: 40,
+} as const
+
+export type LogLevel = (typeof LogLevel)[keyof typeof LogLevel]
 
 export class Logger {
-  constructor(private logLevel: LogLevel) {}
+  private logLevel: LogLevel
+
+  constructor(logLevel: LogLevel) {
+    this.logLevel = logLevel
+  }
 
   private jsonify(args: any[]) {
     return args.map((arg: any): any => {
