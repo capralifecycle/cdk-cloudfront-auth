@@ -1,10 +1,11 @@
+import { expect, test } from "bun:test"
 import { CloudFrontWebDistribution } from "aws-cdk-lib/aws-cloudfront"
 import { UserPool } from "aws-cdk-lib/aws-cognito"
 import type { CfnVersion } from "aws-cdk-lib/aws-lambda"
 import { Bucket } from "aws-cdk-lib/aws-s3"
-import "jest-cdk-snapshot"
+import "@liflig/cdk-snapshot/bun"
 import { App, Stack } from "aws-cdk-lib"
-import { AuthLambdas, CloudFrontAuth } from "."
+import { AuthLambdas, CloudFrontAuth } from "./index.js"
 
 test("A simple example", () => {
   const app = new App()

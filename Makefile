@@ -37,7 +37,7 @@ bun-build:
 
 .PHONY: test
 test:
-	bun run test -- --updateSnapshot
+	bun run test -- --update-snapshots
 
 .PHONY: upgrade-deps
 upgrade-deps:
