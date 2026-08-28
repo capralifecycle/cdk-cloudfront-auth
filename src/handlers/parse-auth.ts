@@ -1,12 +1,16 @@
 import type { CloudFrontResponseResult } from "aws-lambda"
 import type { AxiosResponse } from "axios"
-import { httpPostWithRetry } from "./util/axios"
-import { decodeSafeBase64 } from "./util/base64"
-import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
-import type { Config } from "./util/config"
-import { extractAndParseCookies, generateCookies } from "./util/cookies"
-import { validate } from "./util/jwt"
-import { validateNonce } from "./util/nonce"
+import { httpPostWithRetry } from "./util/axios.js"
+import { decodeSafeBase64 } from "./util/base64.js"
+import {
+  createRequestHandler,
+  redirectTo,
+  staticPage,
+} from "./util/cloudfront.js"
+import type { Config } from "./util/config.js"
+import { extractAndParseCookies, generateCookies } from "./util/cookies.js"
+import { validate } from "./util/jwt.js"
+import { validateNonce } from "./util/nonce.js"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request

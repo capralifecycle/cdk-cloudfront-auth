@@ -1,11 +1,15 @@
 import { createHash, randomBytes } from "node:crypto"
 import type { CloudFrontRequestResult } from "aws-lambda"
-import { safeBase64Stringify } from "./util/base64"
-import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
-import type { Config } from "./util/config"
-import { extractAndParseCookies } from "./util/cookies"
-import { decodeIdToken, type IdTokenPayload, validate } from "./util/jwt"
-import { createNonceHmac, generateNonce } from "./util/nonce"
+import { safeBase64Stringify } from "./util/base64.js"
+import {
+  createRequestHandler,
+  redirectTo,
+  staticPage,
+} from "./util/cloudfront.js"
+import type { Config } from "./util/config.js"
+import { extractAndParseCookies } from "./util/cookies.js"
+import { decodeIdToken, type IdTokenPayload, validate } from "./util/jwt.js"
+import { createNonceHmac, generateNonce } from "./util/nonce.js"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request

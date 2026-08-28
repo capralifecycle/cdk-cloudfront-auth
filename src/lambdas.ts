@@ -4,7 +4,7 @@ import { Duration, Stack } from "aws-cdk-lib"
 import * as iam from "aws-cdk-lib/aws-iam"
 import * as lambda from "aws-cdk-lib/aws-lambda"
 import { Construct } from "constructs"
-import { CrossRegionParam } from "./cross-region-params"
+import { CrossRegionParam } from "./cross-region-params.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

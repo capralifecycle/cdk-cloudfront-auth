@@ -1,5 +1,5 @@
-import { createRequestHandler, redirectTo } from "./util/cloudfront"
-import { extractAndParseCookies, generateCookies } from "./util/cookies"
+import { createRequestHandler, redirectTo } from "./util/cloudfront.js"
+import { extractAndParseCookies, generateCookies } from "./util/cookies.js"
 
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request
