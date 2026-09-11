@@ -9,7 +9,7 @@
         "@biomejs/biome": "2.5.12",
         "@commitlint/cli": "21.2.2",
         "@commitlint/config-conventional": "21.2.2",
-        "@liflig/cdk-snapshot": "1.0.1",
+        "@liflig/cdk-snapshot": "1.2.0",
         "@types/adm-zip": "^0.5.7",
         "@types/aws-lambda": "8.10.163",
         "@types/bun": "1.4.1",
@@ -145,7 +145,7 @@
 
     "@jest/schemas": ["@jest/schemas@29.6.3", "", { "dependencies": { "@sinclair/typebox": "^0.27.8" } }, "sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA=="],
 
-    "@liflig/cdk-snapshot": ["@liflig/cdk-snapshot@1.0.1", "", { "dependencies": { "pretty-format": "^29.7.0" }, "peerDependencies": { "aws-cdk-lib": "^2.0.0", "constructs": "^10.0.0", "vitest": ">=4" }, "optionalPeers": ["vitest"] }, "sha512-XaL6p6JGCrYUsFCzKQs9JdpT9yYMDM1/aPQ0jprgs+Xc4gC25iDpUXkz9CiTnqALyS53PghzDotl+nsm/fs4DA=="],
+    "@liflig/cdk-snapshot": ["@liflig/cdk-snapshot@1.2.0", "", { "dependencies": { "pretty-format": "^29.7.0" }, "peerDependencies": { "aws-cdk-lib": "^2.0.0", "constructs": "^10.0.0", "vitest": ">=4" }, "optionalPeers": ["vitest"] }, "sha512-OMpxfM2W5BjtRg/iAkebYAKIIivyFvwac+fB++jqTIH7aBiHEku1MuxnfGqH04emEZtutwpYBo6iZPHPvSJjEg=="],
 
     "@octokit/auth-token": ["@octokit/auth-token@6.0.0", "", {}, "sha512-P4YJBPdPSpWTQ1NU4XYdvHvXJJDxM6YwpS0FZHRgP7YFkdVxsWcpWGy/NVqlAA7PcPCnMacXlRm1y2PFZRWL/w=="],
 
