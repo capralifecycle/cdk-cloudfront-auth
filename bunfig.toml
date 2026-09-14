@@ -1,4 +1,5 @@
 [install]
+exact = true
 minimumReleaseAge = 259200
 minimumReleaseAgeExcludes = ["@liflig/cdk-snapshot"]
 
