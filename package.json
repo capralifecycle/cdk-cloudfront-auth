@@ -42,7 +42,7 @@
     "@commitlint/config-conventional": "21.2.3",
     "@liflig/cdk-snapshot": "1.2.0",
     "@types/adm-zip": "^0.5.7",
-    "@types/aws-lambda": "8.10.163",
+    "@types/aws-lambda": "8.10.164",
     "@types/bun": "1.4.2",
     "@types/jsonwebtoken": "9.0.10",
     "@types/node": "24.19.0",
