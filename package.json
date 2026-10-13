@@ -45,7 +45,7 @@
     "@types/aws-lambda": "8.10.164",
     "@types/bun": "1.4.2",
     "@types/jsonwebtoken": "9.0.10",
-    "@types/node": "24.19.1",
+    "@types/node": "24.19.2",
     "adm-zip": "0.6.1",
     "aws-cdk-lib": "2.273.0",
     "axios": "1.20.0",
