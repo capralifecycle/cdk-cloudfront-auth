@@ -2,6 +2,7 @@
 exact = true
 minimumReleaseAge = 259200
 minimumReleaseAgeExcludes = ["@liflig/cdk-snapshot"]
+coverageSkipTestFiles = true
 
 # Mirrors the loader build.ts declares, so the error-page handler's template
 # import is a string under `bun test` rather than an HTMLBundle.
