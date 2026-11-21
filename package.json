@@ -54,7 +54,7 @@
     "husky": "9.1.7",
     "jsonwebtoken": "9.0.3",
     "jwks-rsa": "4.1.0",
-    "semantic-release": "25.0.9",
+    "semantic-release": "26.0.1",
     "typescript": "7.0.2"
   },
   "dependencies": {},
